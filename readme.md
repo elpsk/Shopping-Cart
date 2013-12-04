@@ -14,7 +14,6 @@ More example on www.albertopasca.it/whiletrue
 
 ## How to use
 
-
 ```
 	APChartObject appleObject = [[APChartObject alloc] initWithFrame:CGRectMake(0, 0, 80, 80) target:self selector:@selector(panDetected:)];
 	appleObject.image		 = [UIImage imageNamed:@"apple"];
@@ -33,8 +32,9 @@ Nothing implemented seriously.
 
 ## Copyrigth
 
-(c)2012 Alberto Pasca. More info -> albertopasca.it.
+(c)2012 Alberto Pasca - albertopasca.it.
 
 ## License
 
-Enjoy.
+Have fun.
+
