@@ -2,6 +2,12 @@
 
 A simple drag 'n drop shopping cart for iOS.
 
+Created for a stackoverflow question, this one:
+http://stackoverflow.com/questions/3960960/drag-an-uiimageview-from-uiscrollview-to-another-view
+
+![SS Screenshot](http://i.stack.imgur.com/I0ekn.png "SS")
+
+
 iOS 5.0+. ARC.
 
 ![A Screenshot](https://raw.github.com/elpsk/Shopping-Cart/master/A.png "A")
