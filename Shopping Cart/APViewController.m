@@ -16,9 +16,9 @@
 	//
 	// cart objects
 	//
-	APChartObject *_appleModel,	*_appleModel2;
-	APChartObject *_pearModel,	*_pearModel2;
-	APChartObject *_kiwiModel,	*_kiwiModel2;
+	APChartObject *_appleObj,	*_appleObj2;
+	APChartObject *_pearObj,	*_pearObj2;
+	APChartObject *_kiwiObj,	*_kiwiObj2;
 
 	//
 	// draggable view
@@ -87,41 +87,41 @@
 	//
 	// some example objects
 	//
-	_appleModel = [[APChartObject alloc] initWithFrame:CGRectMake(0, 0, 80, 80) target:self selector:@selector(panDetected:)];
-	_appleModel.image		 = [UIImage imageNamed:@"apple"];
-	_appleModel.text		 = @"apple";
-	_appleModel.price		 = 1.30;
-	_appleModel.quantity = 3;
+	_appleObj = [[APChartObject alloc] initWithFrame:CGRectMake(0, 0, 80, 80) target:self selector:@selector(panDetected:)];
+	_appleObj.image		 = [UIImage imageNamed:@"apple"];
+	_appleObj.text		 = @"apple";
+	_appleObj.price		 = 1.30;
+	_appleObj.quantity = 3;
 
-	_pearModel = [[APChartObject alloc] initWithFrame:CGRectMake(80, 0, 80, 80) target:self selector:@selector(panDetected:)];
-	_pearModel.image		 = [UIImage imageNamed:@"pear"];
-	_pearModel.text			 = @"pear";
-	_pearModel.price		 = 0.80;
-	_pearModel.quantity	 = 5;
+	_pearObj = [[APChartObject alloc] initWithFrame:CGRectMake(80, 0, 80, 80) target:self selector:@selector(panDetected:)];
+	_pearObj.image		 = [UIImage imageNamed:@"pear"];
+	_pearObj.text			 = @"pear";
+	_pearObj.price		 = 0.80;
+	_pearObj.quantity	 = 5;
 
-	_kiwiModel = [[APChartObject alloc] initWithFrame:CGRectMake(80+80, 0, 80, 80) target:self selector:@selector(panDetected:)];
-	_kiwiModel.image		 = [UIImage imageNamed:@"kiwi"];
-	_kiwiModel.text      = @"kiwi";
-	_kiwiModel.price		 = 0.75;
-	_kiwiModel.quantity	 = 2;
+	_kiwiObj = [[APChartObject alloc] initWithFrame:CGRectMake(80+80, 0, 80, 80) target:self selector:@selector(panDetected:)];
+	_kiwiObj.image		 = [UIImage imageNamed:@"kiwi"];
+	_kiwiObj.text      = @"kiwi";
+	_kiwiObj.price		 = 0.75;
+	_kiwiObj.quantity	 = 2;
 
-	_appleModel2 = [[APChartObject alloc] initWithFrame:CGRectMake(80+80+80, 0, 80, 80) target:self selector:@selector(panDetected:)];
-	_appleModel2.image    = [UIImage imageNamed:@"apple"];
-	_appleModel2.text	    = @"apple2";
-	_appleModel2.price		= 1.05;
-	_appleModel2.quantity = 2;
+	_appleObj2 = [[APChartObject alloc] initWithFrame:CGRectMake(80+80+80, 0, 80, 80) target:self selector:@selector(panDetected:)];
+	_appleObj2.image    = [UIImage imageNamed:@"apple"];
+	_appleObj2.text	    = @"apple2";
+	_appleObj2.price		= 1.05;
+	_appleObj2.quantity = 2;
 
-	_pearModel2 = [[APChartObject alloc] initWithFrame:CGRectMake(80+80+80+80, 0, 80, 80) target:self selector:@selector(panDetected:)];
-	_pearModel2.image    = [UIImage imageNamed:@"pear"];
-	_pearModel2.text	   = @"pear2";
-	_pearModel2.price		 = 0.55;
-	_pearModel2.quantity = 4;
+	_pearObj2 = [[APChartObject alloc] initWithFrame:CGRectMake(80+80+80+80, 0, 80, 80) target:self selector:@selector(panDetected:)];
+	_pearObj2.image    = [UIImage imageNamed:@"pear"];
+	_pearObj2.text	   = @"pear2";
+	_pearObj2.price		 = 0.55;
+	_pearObj2.quantity = 4;
 
-	_kiwiModel2 = [[APChartObject alloc] initWithFrame:CGRectMake(80+80+80+80+80, 0, 80, 80) target:self selector:@selector(panDetected:)];
-	_kiwiModel2.image		 = [UIImage imageNamed:@"kiwi"];
-	_kiwiModel2.text		 = @"kiwi2";
-	_kiwiModel.price		 = 1.25;
-	_kiwiModel.quantity	 = 7;
+	_kiwiObj2 = [[APChartObject alloc] initWithFrame:CGRectMake(80+80+80+80+80, 0, 80, 80) target:self selector:@selector(panDetected:)];
+	_kiwiObj2.image		 = [UIImage imageNamed:@"kiwi"];
+	_kiwiObj2.text		 = @"kiwi2";
+	_kiwiObj.price		 = 1.25;
+	_kiwiObj.quantity	 = 7;
 }
 
 
@@ -132,12 +132,12 @@
 
 - (void) initScroller
 {
-	[ _scrollview addSubview:_appleModel.imageView	];
-	[ _scrollview addSubview:_pearModel.imageView		];
-	[ _scrollview addSubview:_kiwiModel.imageView		];
-	[ _scrollview addSubview:_appleModel2.imageView ];
-	[ _scrollview addSubview:_pearModel2.imageView	];
-	[ _scrollview addSubview:_kiwiModel2.imageView	];
+	[ _scrollview addSubview:_appleObj.imageView	];
+	[ _scrollview addSubview:_pearObj.imageView		];
+	[ _scrollview addSubview:_kiwiObj.imageView		];
+	[ _scrollview addSubview:_appleObj2.imageView ];
+	[ _scrollview addSubview:_pearObj2.imageView	];
+	[ _scrollview addSubview:_kiwiObj2.imageView	];
 
 	//
 	// prepare scrollview size ( *6 = count of objects )

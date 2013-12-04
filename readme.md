@@ -6,41 +6,30 @@ iOS 5.0+. ARC.
 
 ![A Screenshot](https://raw.github.com/elpsk/Shopping-Cart/master/A.png "A")
 ![B Screenshot](https://raw.github.com/elpsk/Shopping-Cart/master/B.png "B")
-![C Screenshot](https://raw.github.com/elpsk/Shopping-Cart/master/A.png "A")
-![D Screenshot](https://raw.github.com/elpsk/Shopping-Cart/master/B.png "B")
+![C Screenshot](https://raw.github.com/elpsk/Shopping-Cart/master/C.png "A")
+![D Screenshot](https://raw.github.com/elpsk/Shopping-Cart/master/D.png "B")
 
 More example on www.albertopasca.it/whiletrue
 
 
 ## How to use
 
-very easy:
 
-``` objective-c
-   [...]
-   _Scroller = [[APScroller alloc] initWithFrame:CGRectMake(32, 100, 12 * MAXSCROLL, 50)];
-   [self.view addSubview:_Scroller];
+```
+	APChartObject appleObject = [[APChartObject alloc] initWithFrame:CGRectMake(0, 0, 80, 80) target:self selector:@selector(panDetected:)];
+	appleObject.image		 = [UIImage imageNamed:@"apple"];
+	appleObject.text		 = @"apple";
+	appleObject.price		 = 1.30;
+	appleObject.quantity = 3;
 
-
-	- (void)Animate:(UIButton*)sender
-	{
-	  [_Scroller setWorld:@"THIS3IS6ANIMATED" animated:YES];
-	}
-
-	- (IBAction)Reset:(UIButton*)sender
-	{
-	  [_Scroller setWorld:@"0000000000000000" animated:NO];
-	}
-
-	- (IBAction)SetSpeed:(UISlider*)sender
-	{
-	  _Scroller.Speed = sender.value;
-	}
+	[ _scrollview addSubview:appleObject.imageView ];   
 ```
 
 ## TODO
+Everithing!
+You can set quantity, add, remove objects, etc...
+Nothing implemented seriously.
 
-More customization and bug fix. Enjoy.
 
 ## Copyrigth
 
@@ -48,12 +37,4 @@ More customization and bug fix. Enjoy.
 
 ## License
 
-APScroller is available under the MIT license.
-
-Copyright (c) 2012 Alberto Pasca (albertopasca.it). All rights reserved.
-
-Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
-
-The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
-
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+Enjoy.
